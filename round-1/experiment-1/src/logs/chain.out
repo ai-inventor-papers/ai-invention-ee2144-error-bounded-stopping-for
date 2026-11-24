@@ -1,0 +1,153 @@
+00:48:34|INFO   |seed=0 device=mps epochs=30 smoke=False
+./method.py:357: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:821.)
+  tot += float(loss)
+00:48:38|INFO   |epoch 1/30 train_loss=1.8094 val_loss=1.4332 time=3.9s
+00:48:41|INFO   |epoch 2/30 train_loss=1.2810 val_loss=1.1992 time=2.7s
+00:48:44|INFO   |epoch 3/30 train_loss=1.1164 val_loss=1.1100 time=2.7s
+00:48:47|INFO   |epoch 4/30 train_loss=1.0417 val_loss=1.0660 time=2.5s
+00:48:49|INFO   |epoch 5/30 train_loss=0.9902 val_loss=1.0200 time=2.2s
+00:48:52|INFO   |epoch 6/30 train_loss=0.9575 val_loss=1.0071 time=2.8s
+00:48:55|INFO   |epoch 7/30 train_loss=0.9331 val_loss=0.9888 time=3.0s
+00:48:58|INFO   |epoch 8/30 train_loss=0.9126 val_loss=0.9905 time=2.4s
+00:49:01|INFO   |epoch 9/30 train_loss=0.8945 val_loss=0.9814 time=2.5s
+00:49:03|INFO   |epoch 10/30 train_loss=0.8811 val_loss=0.9686 time=2.7s
+00:49:06|INFO   |epoch 11/30 train_loss=0.8701 val_loss=0.9680 time=2.9s
+00:49:09|INFO   |epoch 12/30 train_loss=0.8581 val_loss=0.9580 time=2.5s
+00:49:12|INFO   |epoch 13/30 train_loss=0.8484 val_loss=0.9719 time=2.5s
+00:49:14|INFO   |epoch 14/30 train_loss=0.8377 val_loss=0.9687 time=2.1s
+00:49:17|INFO   |epoch 15/30 train_loss=0.8283 val_loss=0.9602 time=2.5s
+00:49:19|INFO   |epoch 16/30 train_loss=0.8201 val_loss=0.9647 time=2.4s
+00:49:19|INFO   |early stopping
+00:49:19|INFO   |causality max |diff| = 0.000e+00
+00:49:19|INFO   |checkpoint ./checkpoints/seed0.pt
+00:49:22|INFO   |[seed 0] causality max |diff| = 0.00e+00
+00:49:26|INFO   |[seed 0] calibration: calibrated NLL <= raw NLL at every t: True; mean NLL raw 1.0749 cal 1.0654; T at t=49: 0.786
+00:49:26|INFO   |[seed 0] full window test one-vs-rest mean error FA=0.0303 FR=0.0280; 12-class accuracy at t=49 = 0.9130
+00:49:26|INFO   |[seed 0] feasibility: mean prefix 26.41 columns, stop fraction 0.856
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3038: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:588: RuntimeWarning: Mean of empty slice
+  avg = a.mean(axis, **keepdims_kw)
+./.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:134: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3029: RuntimeWarning: Degrees of freedom <= 0 for slice
+  c = cov(x, y, rowvar, dtype=dtype)
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:2902: RuntimeWarning: divide by zero encountered in divide
+  c *= np.true_divide(1, fact)
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:2902: RuntimeWarning: invalid value encountered in multiply
+  c *= np.true_divide(1, fact)
+00:49:27|INFO   |[seed 0] decorrelated stride s=1 (lag-1 autocorr -0.052)
+00:49:30|INFO   |[seed 0] alpha=beta=0.001: SPRT FA=0.0302 FR=0.0285 m=32.11 | threshold tau=0.999 FA=0.0293 FR=0.0307 m=27.37 | decorr m=32.11 | uncal m=29.61 FA=0.0378 FR=0.0218
+00:49:34|INFO   |[seed 0] alpha=beta=0.0025: SPRT FA=0.0303 FR=0.0290 m=29.94 | threshold tau=0.999 FA=0.0293 FR=0.0307 m=27.37 | decorr m=29.94 | uncal m=27.70 FA=0.0379 FR=0.0218
+00:49:37|INFO   |[seed 0] alpha=beta=0.005: SPRT FA=0.0305 FR=0.0290 m=28.28 | threshold tau=0.999 FA=0.0293 FR=0.0307 m=27.37 | decorr m=28.28 | uncal m=26.30 FA=0.0380 FR=0.0221
+00:49:40|INFO   |[seed 0] alpha=beta=0.01: SPRT FA=0.0312 FR=0.0292 m=26.63 | threshold tau=0.999 FA=0.0293 FR=0.0307 m=27.37 | decorr m=26.63 | uncal m=24.91 FA=0.0387 FR=0.0253
+00:49:44|INFO   |[seed 0] alpha=beta=0.02: SPRT FA=0.0326 FR=0.0307 m=25.01 | threshold tau=0.999 FA=0.0293 FR=0.0307 m=27.37 | decorr m=25.01 | uncal m=23.54 FA=0.0404 FR=0.0275
+00:49:47|INFO   |[seed 0] alpha=beta=0.05: SPRT FA=0.0389 FR=0.0356 m=22.79 | threshold tau=0.996 FA=0.0284 FR=0.0363 m=24.38 | decorr m=22.79 | uncal m=21.57 FA=0.0475 FR=0.0415
+00:49:47|INFO   |saved results/seed0.json
+00:49:49|INFO   |seed=1 device=mps epochs=30 smoke=False
+./method.py:357: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:821.)
+  tot += float(loss)
+00:49:55|INFO   |epoch 1/30 train_loss=1.8411 val_loss=1.4587 time=5.6s
+00:49:58|INFO   |epoch 2/30 train_loss=1.2696 val_loss=1.1938 time=2.4s
+00:50:00|INFO   |epoch 3/30 train_loss=1.0998 val_loss=1.1050 time=2.4s
+00:50:03|INFO   |epoch 4/30 train_loss=1.0245 val_loss=1.0549 time=2.3s
+00:50:05|INFO   |epoch 5/30 train_loss=0.9808 val_loss=1.0118 time=2.1s
+00:50:08|INFO   |epoch 6/30 train_loss=0.9458 val_loss=0.9974 time=2.3s
+00:50:10|INFO   |epoch 7/30 train_loss=0.9244 val_loss=0.9852 time=2.1s
+00:50:12|INFO   |epoch 8/30 train_loss=0.9054 val_loss=0.9782 time=1.9s
+00:50:14|INFO   |epoch 9/30 train_loss=0.8892 val_loss=0.9731 time=2.0s
+00:50:16|INFO   |epoch 10/30 train_loss=0.8726 val_loss=0.9647 time=1.9s
+00:50:18|INFO   |epoch 11/30 train_loss=0.8608 val_loss=0.9723 time=2.1s
+00:50:20|INFO   |epoch 12/30 train_loss=0.8508 val_loss=0.9631 time=2.2s
+00:50:23|INFO   |epoch 13/30 train_loss=0.8414 val_loss=0.9674 time=2.1s
+00:50:25|INFO   |epoch 14/30 train_loss=0.8313 val_loss=0.9621 time=2.2s
+00:50:27|INFO   |epoch 15/30 train_loss=0.8220 val_loss=0.9582 time=2.1s
+00:50:29|INFO   |epoch 16/30 train_loss=0.8143 val_loss=0.9602 time=2.0s
+00:50:32|INFO   |epoch 17/30 train_loss=0.8082 val_loss=0.9619 time=2.1s
+00:50:34|INFO   |epoch 18/30 train_loss=0.8024 val_loss=0.9627 time=2.1s
+00:50:36|INFO   |epoch 19/30 train_loss=0.7961 val_loss=0.9650 time=2.1s
+00:50:36|INFO   |early stopping
+00:50:36|INFO   |causality max |diff| = 0.000e+00
+00:50:36|INFO   |checkpoint ./checkpoints/seed1.pt
+00:50:39|INFO   |[seed 1] causality max |diff| = 0.00e+00
+00:50:42|INFO   |[seed 1] calibration: calibrated NLL <= raw NLL at every t: True; mean NLL raw 1.0797 cal 1.0619; T at t=49: 0.886
+00:50:43|INFO   |[seed 1] full window test one-vs-rest mean error FA=0.0295 FR=0.0275; 12-class accuracy at t=49 = 0.9126
+00:50:43|INFO   |[seed 1] feasibility: mean prefix 26.43 columns, stop fraction 0.852
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3038: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:588: RuntimeWarning: Mean of empty slice
+  avg = a.mean(axis, **keepdims_kw)
+./.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:134: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3029: RuntimeWarning: Degrees of freedom <= 0 for slice
+  c = cov(x, y, rowvar, dtype=dtype)
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:2902: RuntimeWarning: divide by zero encountered in divide
+  c *= np.true_divide(1, fact)
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:2902: RuntimeWarning: invalid value encountered in multiply
+  c *= np.true_divide(1, fact)
+00:50:43|INFO   |[seed 1] decorrelated stride s=1 (lag-1 autocorr -0.053)
+00:50:46|INFO   |[seed 1] alpha=beta=0.001: SPRT FA=0.0295 FR=0.0275 m=31.85 | threshold tau=0.999 FA=0.0287 FR=0.0302 m=27.29 | decorr m=31.85 | uncal m=28.14 FA=0.0333 FR=0.0258
+00:50:50|INFO   |[seed 1] alpha=beta=0.0025: SPRT FA=0.0295 FR=0.0275 m=29.74 | threshold tau=0.999 FA=0.0287 FR=0.0302 m=27.29 | decorr m=29.74 | uncal m=26.42 FA=0.0330 FR=0.0282
+00:50:53|INFO   |[seed 1] alpha=beta=0.005: SPRT FA=0.0298 FR=0.0280 m=28.14 | threshold tau=0.999 FA=0.0287 FR=0.0302 m=27.29 | decorr m=28.14 | uncal m=25.17 FA=0.0334 FR=0.0312
+00:50:57|INFO   |[seed 1] alpha=beta=0.01: SPRT FA=0.0302 FR=0.0299 m=26.54 | threshold tau=0.999 FA=0.0287 FR=0.0302 m=27.29 | decorr m=26.54 | uncal m=23.92 FA=0.0343 FR=0.0349
+00:51:00|INFO   |[seed 1] alpha=beta=0.02: SPRT FA=0.0315 FR=0.0309 m=24.94 | threshold tau=0.998 FA=0.0282 FR=0.0331 m=25.81 | decorr m=24.94 | uncal m=22.68 FA=0.0362 FR=0.0412
+00:51:05|INFO   |[seed 1] alpha=beta=0.05: SPRT FA=0.0376 FR=0.0390 m=22.74 | threshold tau=0.997 FA=0.0275 FR=0.0366 m=24.94 | decorr m=22.74 | uncal m=20.86 FA=0.0449 FR=0.0545
+00:51:05|INFO   |saved results/seed1.json
+00:51:07|INFO   |seed=2 device=mps epochs=30 smoke=False
+./method.py:357: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:821.)
+  tot += float(loss)
+00:51:11|INFO   |epoch 1/30 train_loss=1.8265 val_loss=1.4830 time=3.6s
+00:51:13|INFO   |epoch 2/30 train_loss=1.2821 val_loss=1.1884 time=2.3s
+00:51:16|INFO   |epoch 3/30 train_loss=1.1070 val_loss=1.0906 time=2.4s
+00:51:18|INFO   |epoch 4/30 train_loss=1.0284 val_loss=1.0631 time=2.2s
+00:51:21|INFO   |epoch 5/30 train_loss=0.9819 val_loss=1.0278 time=2.2s
+00:51:23|INFO   |epoch 6/30 train_loss=0.9485 val_loss=0.9945 time=2.1s
+00:51:25|INFO   |epoch 7/30 train_loss=0.9228 val_loss=0.9814 time=2.2s
+00:51:28|INFO   |epoch 8/30 train_loss=0.9027 val_loss=0.9783 time=2.3s
+00:51:31|INFO   |epoch 9/30 train_loss=0.8868 val_loss=0.9672 time=2.8s
+00:51:33|INFO   |epoch 10/30 train_loss=0.8731 val_loss=0.9659 time=2.1s
+00:51:35|INFO   |epoch 11/30 train_loss=0.8604 val_loss=0.9687 time=2.3s
+00:51:37|INFO   |epoch 12/30 train_loss=0.8488 val_loss=0.9648 time=1.9s
+00:51:40|INFO   |epoch 13/30 train_loss=0.8398 val_loss=0.9654 time=2.1s
+00:51:42|INFO   |epoch 14/30 train_loss=0.8302 val_loss=0.9554 time=2.0s
+00:51:44|INFO   |epoch 15/30 train_loss=0.8207 val_loss=0.9686 time=2.1s
+00:51:46|INFO   |epoch 16/30 train_loss=0.8142 val_loss=0.9619 time=2.0s
+00:51:48|INFO   |epoch 17/30 train_loss=0.8072 val_loss=0.9613 time=1.9s
+00:51:50|INFO   |epoch 18/30 train_loss=0.8016 val_loss=0.9657 time=1.8s
+00:51:50|INFO   |early stopping
+00:51:50|INFO   |causality max |diff| = 0.000e+00
+00:51:50|INFO   |checkpoint ./checkpoints/seed2.pt
+00:51:53|INFO   |[seed 2] causality max |diff| = 0.00e+00
+00:51:57|INFO   |[seed 2] calibration: calibrated NLL <= raw NLL at every t: True; mean NLL raw 1.0798 cal 1.0614; T at t=49: 0.851
+00:51:57|INFO   |[seed 2] full window test one-vs-rest mean error FA=0.0302 FR=0.0312; 12-class accuracy at t=49 = 0.9136
+00:51:57|INFO   |[seed 2] feasibility: mean prefix 26.19 columns, stop fraction 0.854
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3038: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:588: RuntimeWarning: Mean of empty slice
+  avg = a.mean(axis, **keepdims_kw)
+./.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:134: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3029: RuntimeWarning: Degrees of freedom <= 0 for slice
+  c = cov(x, y, rowvar, dtype=dtype)
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:2902: RuntimeWarning: divide by zero encountered in divide
+  c *= np.true_divide(1, fact)
+./.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:2902: RuntimeWarning: invalid value encountered in multiply
+  c *= np.true_divide(1, fact)
+00:51:57|INFO   |[seed 2] decorrelated stride s=1 (lag-1 autocorr -0.052)
+00:52:00|INFO   |[seed 2] alpha=beta=0.001: SPRT FA=0.0302 FR=0.0317 m=31.69 | threshold tau=0.999 FA=0.0296 FR=0.0334 m=27.19 | decorr m=31.69 | uncal m=28.48 FA=0.0352 FR=0.0295
+00:52:04|INFO   |[seed 2] alpha=beta=0.0025: SPRT FA=0.0302 FR=0.0319 m=29.58 | threshold tau=0.999 FA=0.0296 FR=0.0334 m=27.19 | decorr m=29.58 | uncal m=26.76 FA=0.0353 FR=0.0307
+00:52:07|INFO   |[seed 2] alpha=beta=0.005: SPRT FA=0.0303 FR=0.0324 m=27.97 | threshold tau=0.999 FA=0.0296 FR=0.0334 m=27.19 | decorr m=27.97 | uncal m=25.50 FA=0.0355 FR=0.0329
+00:52:10|INFO   |[seed 2] alpha=beta=0.01: SPRT FA=0.0309 FR=0.0331 m=26.45 | threshold tau=0.999 FA=0.0296 FR=0.0334 m=27.19 | decorr m=26.45 | uncal m=24.29 FA=0.0363 FR=0.0368
+00:52:14|INFO   |[seed 2] alpha=beta=0.02: SPRT FA=0.0323 FR=0.0349 m=24.91 | threshold tau=0.999 FA=0.0296 FR=0.0334 m=27.19 | decorr m=24.91 | uncal m=22.99 FA=0.0388 FR=0.0410
+00:52:17|INFO   |[seed 2] alpha=beta=0.05: SPRT FA=0.0386 FR=0.0390 m=22.79 | threshold tau=0.997 FA=0.0287 FR=0.0373 m=24.92 | decorr m=22.79 | uncal m=21.09 FA=0.0457 FR=0.0560
+00:52:17|INFO   |saved results/seed2.json
+CHAIN_DONE

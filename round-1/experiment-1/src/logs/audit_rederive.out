@@ -1,0 +1,9 @@
+                 independent      method.py (detailed)
+FA               0.03176          0.03123
+FR               0.02896          0.02921
+mean m           26.6471          26.6344
+saving vs full   0.36494          0.36515
+FA boundary      0.00515          0.00519
+FA fallback 49   0.18245          0.18054
+threshold tau (reported) 0.9990: independent threshold mean m 27.386, SPRT mean m 26.647
+bootstrap p real (b - SPRT mean m) = 0.0000; placebo (random swap) p = 0.7300 (must not be significant)

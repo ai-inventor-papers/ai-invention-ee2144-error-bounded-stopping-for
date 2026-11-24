@@ -1,0 +1,12 @@
+00:54:31|INFO   |[seed 0] causality max |diff| = 0.00e+00
+00:54:35|INFO   |[seed 0] calibration: calibrated NLL <= raw NLL at every t: True; mean NLL raw 1.0749 cal 1.0654; T at t=49: 0.786
+00:54:35|INFO   |[seed 0] full window test one-vs-rest mean error FA=0.0303 FR=0.0280; 12-class accuracy at t=49 = 0.9130
+00:54:35|INFO   |[seed 0] feasibility: mean prefix 26.41 columns, stop fraction 0.856
+00:54:35|INFO   |[seed 0] decorrelated stride s=5 frames (frame lag-1 autocorr 0.482; column-level lag-1 autocorr -0.052)
+00:54:39|INFO   |[seed 0] alpha=beta=0.001: SPRT FA=0.0302 FR=0.0285 m=32.11 | threshold tau=0.999 FA=0.0293 FR=0.0307 m=27.37 | decorr m=35.47 | uncal m=29.61 FA=0.0378 FR=0.0218
+00:54:42|INFO   |[seed 0] alpha=beta=0.0025: SPRT FA=0.0303 FR=0.0290 m=29.94 | threshold tau=0.999 FA=0.0293 FR=0.0307 m=27.37 | decorr m=33.55 | uncal m=27.70 FA=0.0379 FR=0.0218
+00:54:45|INFO   |[seed 0] alpha=beta=0.005: SPRT FA=0.0305 FR=0.0290 m=28.28 | threshold tau=0.999 FA=0.0293 FR=0.0307 m=27.37 | decorr m=32.07 | uncal m=26.30 FA=0.0380 FR=0.0221
+00:54:49|INFO   |[seed 0] alpha=beta=0.01: SPRT FA=0.0312 FR=0.0292 m=26.63 | threshold tau=0.999 FA=0.0293 FR=0.0307 m=27.37 | decorr m=30.60 | uncal m=24.91 FA=0.0387 FR=0.0253
+00:54:52|INFO   |[seed 0] alpha=beta=0.02: SPRT FA=0.0326 FR=0.0307 m=25.01 | threshold tau=0.999 FA=0.0293 FR=0.0307 m=27.37 | decorr m=29.15 | uncal m=23.54 FA=0.0404 FR=0.0275
+00:54:56|INFO   |[seed 0] alpha=beta=0.05: SPRT FA=0.0389 FR=0.0356 m=22.79 | threshold tau=0.996 FA=0.0284 FR=0.0363 m=24.38 | decorr m=27.17 | uncal m=21.57 FA=0.0475 FR=0.0415
+00:54:56|INFO   |saved results/seed0.json

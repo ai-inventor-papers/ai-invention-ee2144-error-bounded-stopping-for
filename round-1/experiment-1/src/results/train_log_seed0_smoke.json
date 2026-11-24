@@ -1,0 +1,20 @@
+{
+  "seed": 0,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 2.466726303100586,
+      "val_loss": 2.483158147007993,
+      "epoch_seconds": 1.465162992477417
+    },
+    {
+      "epoch": 2,
+      "train_loss": 2.3943570852279663,
+      "val_loss": 2.4822441477040877,
+      "epoch_seconds": 0.05191326141357422
+    }
+  ],
+  "best_val_loss": 2.4822441477040877,
+  "causality_max_abs_diff": 0.0,
+  "n_train": 1000
+}

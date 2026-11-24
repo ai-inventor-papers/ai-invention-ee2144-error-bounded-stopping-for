@@ -1,0 +1,15 @@
+entries:
+  - path: .venv/
+    delete: regenerable
+    source: "uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requirements-frozen.txt"
+  - path: data_raw/
+    delete: redownloadable
+    source: "https://huggingface.co/datasets/danjacobellis/speech_commands_v2 (data/{train,validation,test}-00000-of-00001.parquet); train is split by shard_train.py; see restore.sh"
+  - path: features/
+    delete: regenerable
+    source: ".venv/bin/python method.py prep  (after data_raw/ is restored)"
+  - path: checkpoints/
+    keep: three trained DS-CNN seed checkpoints (about 0.1 MB each) and one smoke-test checkpoint; the evaluation in method_out.json and method_report.md reads them
+  - path: __pycache__/
+    delete: regenerable
+    source: ".venv/bin/python method.py units  (Python bytecode, recreated on import)"

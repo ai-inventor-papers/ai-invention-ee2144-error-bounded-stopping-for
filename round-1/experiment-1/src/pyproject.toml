@@ -1,0 +1,19 @@
+[project]
+name = "early-stop-kws-energy"
+version = "0.1.0"
+description = "Early-stop keyword spotting: calibrated prefix SPRT vs full window and matched confidence threshold (modelled energy)"
+requires-python = "==3.12.*"
+dependencies = [
+  "numpy==2.5.5",
+  "scipy==1.18.1",
+  "soundfile==0.14.0",
+  "datasets==5.2.0",
+  "loguru==0.8.0",
+  "torch==2.16.0.dev20261116+aii1",
+  "pyarrow==26.0.1",
+  "matplotlib==3.11.2",
+  "jsonschema==4.26.0",
+]
+
+[tool.uv]
+# Full transitive pin set: see requirements-frozen.txt (uv pip freeze of the working venv).

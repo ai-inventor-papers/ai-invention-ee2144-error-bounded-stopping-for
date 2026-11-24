@@ -1,0 +1,55 @@
+00:55:51|INFO   |wrote method_out.json (3 seeds)
+00:55:51|INFO   |{
+ "holm": {
+  "b_vs_a_full": {
+   "p_raw_mean_over_seeds": 0.0009995002498750624,
+   "p_holm": 0.0029985007496251873
+  },
+  "c_vs_a_full": {
+   "p_raw_mean_over_seeds": 0.0009995002498750624,
+   "p_holm": 0.0029985007496251873
+  },
+  "b_vs_sprt_literal": {
+   "p_raw_mean_over_seeds": 0.0009995002498750624,
+   "p_holm": 0.0029985007496251873
+  }
+ },
+ "criteria": {
+  "C1_sprt_saves_at_least_15pct_vs_full_window_f0.2": {
+   "per_seed_point": [
+    0.3651518989371082,
+    0.3667396636580791,
+    0.3682229026724594
+   ],
+   "pass": true
+  },
+  "C2_disconfirmed_if_saving_below_5pct_f0.2": {
+   "per_seed_point": [
+    0.3651518989371082,
+    0.3667396636580791,
+    0.3682229026724594
+   ],
+   "disconfirmed": false
+  },
+  "C3_bound_conformance_all_alphas_all_seeds_sprt": {
+   "pass": false
+  },
+  "C4_bound_conformance_decorrelated_all": {
+   "pass": false
+  },
+  "C5_bound_conformance_uncalibrated_all": {
+   "pass": false
+  },
+  "C6_threshold_matched_within_0p5pts_all_seeds_alphas": {
+   "pass": false
+  },
+  "C7_stop_fraction_above_0p1_at_primary": {
+   "per_seed": [
+    0.8481539670070699,
+    0.8497250589159466,
+    0.8491555380989788
+   ],
+   "pass": true
+  }
+ }
+}

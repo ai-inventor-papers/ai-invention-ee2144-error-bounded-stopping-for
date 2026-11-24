@@ -1,0 +1,1273 @@
+{
+  "metadata": {
+    "method_name": "Causal DS-CNN with calibrated prefix SPRT early stopping vs full window and matched confidence threshold",
+    "description": "Early-stop keyword spotting on Speech Commands v2 (HF mirror danjacobellis/speech_commands_v2). Energy is MODELLED (E = f*E_full + (1-f)*E_full*m/49, E_full from arXiv 2505.15622). Full per-seed results: results/method_detailed.json. Report: method_report.md.",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "pre_stated_criteria": {
+      "C1_sprt_saves_at_least_15pct_vs_full_window_f0.2": {
+        "per_seed_point": [
+          0.3651518989371082,
+          0.3667396636580791,
+          0.3682229026724594
+        ],
+        "pass": true
+      },
+      "C2_disconfirmed_if_saving_below_5pct_f0.2": {
+        "per_seed_point": [
+          0.3651518989371082,
+          0.3667396636580791,
+          0.3682229026724594
+        ],
+        "disconfirmed": false
+      },
+      "C3_bound_conformance_all_alphas_all_seeds_sprt": {
+        "pass": false
+      },
+      "C4_bound_conformance_decorrelated_all": {
+        "pass": false
+      },
+      "C5_bound_conformance_uncalibrated_all": {
+        "pass": false
+      },
+      "C6_threshold_matched_within_0p5pts_all_seeds_alphas": {
+        "pass": false
+      },
+      "C7_stop_fraction_above_0p1_at_primary": {
+        "per_seed": [
+          0.8481539670070699,
+          0.8497250589159466,
+          0.8491555380989788
+        ],
+        "pass": true
+      }
+    },
+    "holm_primary_alpha_f0.2": {
+      "b_vs_a_full": {
+        "p_raw_mean_over_seeds": 0.0009995002498750624,
+        "p_holm": 0.0029985007496251873
+      },
+      "c_vs_a_full": {
+        "p_raw_mean_over_seeds": 0.0009995002498750624,
+        "p_holm": 0.0029985007496251873
+      },
+      "b_vs_sprt_literal": {
+        "p_raw_mean_over_seeds": 0.0009995002498750624,
+        "p_holm": 0.0029985007496251873
+      }
+    },
+    "summary_by_alpha_mean_over_seeds": {
+      "0.001": {
+        "a_full_window": {
+          "FA_mean": 0.030006119341388096,
+          "FA_sd": 0.000440759955768507,
+          "FR_mean": 0.028882343315333004,
+          "FR_sd": 0.0019991477209737553,
+          "mean_m_mean": 49.0,
+          "mean_m_sd": 0.0,
+          "stop_fraction_mean": 0.0,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 156.5
+        },
+        "sprt_calibrated": {
+          "FA_mean": 0.029977657288420213,
+          "FA_sd": 0.0004318829328862941,
+          "FR_mean": 0.029209621993127145,
+          "FR_sd": 0.0021816873876572378,
+          "mean_m_mean": 31.886580256611676,
+          "mean_m_sd": 0.2127470533387904,
+          "stop_fraction_mean": 0.7192982456140351,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 112.77346628832208
+        },
+        "b_confidence_threshold": {
+          "FA_mean": 0.0291949508318035,
+          "FA_sd": 0.00043135506599575006,
+          "FR_mean": 0.031418753068237604,
+          "FR_sd": 0.0017182130584192437,
+          "mean_m_mean": 27.282194291699398,
+          "mean_m_sd": 0.0903023798694983,
+          "stop_fraction_mean": 0.8157305577376276,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 101.00879031266868
+        },
+        "c_decorrelated_sprt": {
+          "FA_mean": 0.030020350367872036,
+          "FA_sd": 0.0004509798596106633,
+          "FR_mean": 0.028882343315333004,
+          "FR_sd": 0.0019991477209737553,
+          "mean_m_mean": 35.18658025661168,
+          "mean_m_sd": 0.26550351710386666,
+          "stop_fraction_mean": 0.6614689709347997,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 121.20530302301597
+        },
+        "d_uncalibrated_sprt": {
+          "FA_mean": 0.03543525594501131,
+          "FA_sd": 0.002303745626055357,
+          "FR_mean": 0.025691376206840127,
+          "FR_sd": 0.003805274408192926,
+          "mean_m_mean": 28.74287771667976,
+          "mean_m_sd": 0.7676926985275012,
+          "stop_fraction_mean": 0.7349960722702278,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 104.74098551282258
+        }
+      },
+      "0.0025": {
+        "a_full_window": {
+          "FA_mean": 0.030006119341388096,
+          "FA_sd": 0.000440759955768507,
+          "FR_mean": 0.028882343315333004,
+          "FR_sd": 0.0019991477209737553,
+          "mean_m_mean": 49.0,
+          "mean_m_sd": 0.0,
+          "stop_fraction_mean": 0.0,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 156.5
+        },
+        "sprt_calibrated": {
+          "FA_mean": 0.030034581394355973,
+          "FA_sd": 0.00042639679706780163,
+          "FR_mean": 0.02945508100147275,
+          "FR_sd": 0.002249668971505075,
+          "mean_m_mean": 29.753508771929827,
+          "mean_m_sd": 0.18143830572053676,
+          "stop_fraction_mean": 0.7736122021471589,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 107.32325098460437
+        },
+        "b_confidence_threshold": {
+          "FA_mean": 0.0291949508318035,
+          "FA_sd": 0.00043135506599575006,
+          "FR_mean": 0.031418753068237604,
+          "FR_sd": 0.0017182130584192437,
+          "mean_m_mean": 27.282194291699398,
+          "mean_m_sd": 0.0903023798694983,
+          "stop_fraction_mean": 0.8157305577376276,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 101.00879031266868
+        },
+        "c_decorrelated_sprt": {
+          "FA_mean": 0.030055927934081888,
+          "FA_sd": 0.0004482773342441204,
+          "FR_mean": 0.029045982654230074,
+          "FR_sd": 0.0019065914249273518,
+          "mean_m_mean": 33.290442524221,
+          "mean_m_sd": 0.24057736448817016,
+          "stop_fraction_mean": 0.7228921183555904,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 116.36047763331572
+        },
+        "d_uncalibrated_sprt": {
+          "FA_mean": 0.035421024918527375,
+          "FA_sd": 0.0024241562602758003,
+          "FR_mean": 0.026918671248568157,
+          "FR_sd": 0.004561400708481871,
+          "mean_m_mean": 26.960526315789476,
+          "mean_m_sd": 0.6652990231096254,
+          "stop_fraction_mean": 0.7879811468970934,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 100.18689581095596
+        }
+      },
+      "0.005": {
+        "a_full_window": {
+          "FA_mean": 0.030006119341388096,
+          "FA_sd": 0.000440759955768507,
+          "FR_mean": 0.028882343315333004,
+          "FR_sd": 0.0019991477209737553,
+          "mean_m_mean": 49.0,
+          "mean_m_sd": 0.0,
+          "stop_fraction_mean": 0.0,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 156.5
+        },
+        "sprt_calibrated": {
+          "FA_mean": 0.030205353712163253,
+          "FA_sd": 0.0003794643904416848,
+          "FR_mean": 0.0297823596792669,
+          "FR_sd": 0.002319988034488272,
+          "mean_m_mean": 28.12923540193768,
+          "mean_m_sd": 0.1522020187482673,
+          "stop_fraction_mean": 0.8127716679759098,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 103.17306678209383
+        },
+        "b_confidence_threshold": {
+          "FA_mean": 0.0291949508318035,
+          "FA_sd": 0.00043135506599575006,
+          "FR_mean": 0.031418753068237604,
+          "FR_sd": 0.0017182130584192437,
+          "mean_m_mean": 27.282194291699398,
+          "mean_m_sd": 0.0903023798694983,
+          "stop_fraction_mean": 0.8157305577376276,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 101.00879031266868
+        },
+        "c_decorrelated_sprt": {
+          "FA_mean": 0.030070158960565824,
+          "FA_sd": 0.00038738725722057193,
+          "FR_mean": 0.02929144166257568,
+          "FR_sd": 0.0021445495699690975,
+          "mean_m_mean": 31.848167059439643,
+          "mean_m_sd": 0.20497100200998358,
+          "stop_fraction_mean": 0.7651741293532339,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 112.67531664983353
+        },
+        "d_uncalibrated_sprt": {
+          "FA_mean": 0.03560602826281859,
+          "FA_sd": 0.0023080930654835116,
+          "FR_mean": 0.028718703976435934,
+          "FR_sd": 0.005803431721913052,
+          "mean_m_mean": 25.655250065462166,
+          "mean_m_sd": 0.5849355067451446,
+          "stop_fraction_mean": 0.8242144540455616,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 96.85178179991557
+        }
+      },
+      "0.01": {
+        "a_full_window": {
+          "FA_mean": 0.030006119341388096,
+          "FA_sd": 0.000440759955768507,
+          "FR_mean": 0.028882343315333004,
+          "FR_sd": 0.0019991477209737553,
+          "mean_m_mean": 49.0,
+          "mean_m_sd": 0.0,
+          "stop_fraction_mean": 0.0,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 156.5
+        },
+        "sprt_calibrated": {
+          "FA_mean": 0.030760363745036923,
+          "FA_sd": 0.0005450687501517184,
+          "FR_mean": 0.030764195712649323,
+          "FR_sd": 0.002087604454618405,
+          "mean_m_mean": 26.53932966745221,
+          "mean_m_sd": 0.094067646592146,
+          "stop_fraction_mean": 0.8490115213406652,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 99.11069539520444
+        },
+        "b_confidence_threshold": {
+          "FA_mean": 0.0291949508318035,
+          "FA_sd": 0.00043135506599575006,
+          "FR_mean": 0.031418753068237604,
+          "FR_sd": 0.0017182130584192437,
+          "mean_m_mean": 27.282194291699398,
+          "mean_m_sd": 0.0903023798694983,
+          "stop_fraction_mean": 0.8157305577376276,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 101.00879031266868
+        },
+        "c_decorrelated_sprt": {
+          "FA_mean": 0.0302907398710669,
+          "FA_sd": 0.0003794643904416848,
+          "FR_mean": 0.02912780232367861,
+          "FR_sd": 0.002227239009788283,
+          "mean_m_mean": 30.416705943964388,
+          "mean_m_sd": 0.16140138633532009,
+          "stop_fraction_mean": 0.8045168892380204,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 109.01778743233349
+        },
+        "d_uncalibrated_sprt": {
+          "FA_mean": 0.036438543312129104,
+          "FA_sd": 0.0022014896613335166,
+          "FR_mean": 0.0323187694321715,
+          "FR_sd": 0.006172370876302503,
+          "mean_m_mean": 24.37399842890809,
+          "mean_m_sd": 0.4986403106879713,
+          "stop_fraction_mean": 0.8578161822466615,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 93.57805312855699
+        }
+      },
+      "0.02": {
+        "a_full_window": {
+          "FA_mean": 0.030006119341388096,
+          "FA_sd": 0.000440759955768507,
+          "FR_mean": 0.028882343315333004,
+          "FR_sd": 0.0019991477209737553,
+          "mean_m_mean": 49.0,
+          "mean_m_sd": 0.0,
+          "stop_fraction_mean": 0.0,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 156.5
+        },
+        "sprt_calibrated": {
+          "FA_mean": 0.032119426774253224,
+          "FA_sd": 0.0005713274179551664,
+          "FR_mean": 0.03215513009327443,
+          "FR_sd": 0.0023415297040180316,
+          "mean_m_mean": 24.95134852055512,
+          "mean_m_sd": 0.051853833313886974,
+          "stop_fraction_mean": 0.8829143754909662,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 95.0532415259898
+        },
+        "b_confidence_threshold": {
+          "FA_mean": 0.029002831974270307,
+          "FA_sd": 0.0007505770398884131,
+          "FR_mean": 0.032400589101620025,
+          "FR_sd": 0.0014930688586888127,
+          "mean_m_mean": 26.788805970149255,
+          "mean_m_sd": 0.8510946618430426,
+          "stop_fraction_mean": 0.8265841843414506,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 99.74813280536097
+        },
+        "b_oracle_threshold_test_tuned": {
+          "FA_mean": 0.0291949508318035,
+          "FA_sd": 0.00043135506599575006,
+          "FR_mean": 0.031418753068237604,
+          "FR_sd": 0.0017182130584192437,
+          "mean_m_mean": 27.282194291699398,
+          "mean_m_sd": 0.0903023798694983,
+          "stop_fraction_mean": 0.8157305577376276,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 101.00879031266868
+        },
+        "c_decorrelated_sprt": {
+          "FA_mean": 0.030767479258278902,
+          "FA_sd": 0.000529089966984626,
+          "FR_mean": 0.029700540009818362,
+          "FR_sd": 0.0025508848417803796,
+          "mean_m_mean": 29.01631317098717,
+          "mean_m_sd": 0.11987018365535658,
+          "stop_fraction_mean": 0.8401806755695208,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 105.43964100015499
+        },
+        "d_uncalibrated_sprt": {
+          "FA_mean": 0.03844511804636468,
+          "FA_sd": 0.002125991045907498,
+          "FR_mean": 0.03657339224349534,
+          "FR_sd": 0.007866185743231256,
+          "mean_m_mean": 23.06751767478397,
+          "mean_m_sd": 0.4373786285019436,
+          "stop_fraction_mean": 0.8897158942131448,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 90.23986148740721
+        }
+      },
+      "0.05": {
+        "a_full_window": {
+          "FA_mean": 0.030006119341388096,
+          "FA_sd": 0.000440759955768507,
+          "FR_mean": 0.028882343315333004,
+          "FR_sd": 0.0019991477209737553,
+          "mean_m_mean": 49.0,
+          "mean_m_sd": 0.0,
+          "stop_fraction_mean": 0.0,
+          "bound_pass_all_seeds": true,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 156.5
+        },
+        "sprt_calibrated": {
+          "FA_mean": 0.03835261637421907,
+          "FA_sd": 0.0006941182255764128,
+          "FR_mean": 0.0378825069546719,
+          "FR_sd": 0.0019840215436069623,
+          "mean_m_mean": 22.774836344592824,
+          "mean_m_sd": 0.02989490917347063,
+          "stop_fraction_mean": 0.924450117831893,
+          "bound_pass_all_seeds": true,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 89.49203082332697
+        },
+        "b_confidence_threshold": {
+          "FA_mean": 0.02821301000441162,
+          "FA_sd": 0.0006376627446878286,
+          "FR_mean": 0.03673703158239241,
+          "FR_sd": 0.0005109636719357205,
+          "mean_m_mean": 24.74524744697565,
+          "mean_m_sd": 0.3172651993047985,
+          "stop_fraction_mean": 0.8704176485991098,
+          "bound_pass_all_seeds": true,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 94.52663225227246
+        },
+        "b_oracle_threshold_test_tuned": {
+          "FA_mean": 0.028184547951443737,
+          "FA_sd": 0.0006001124483122204,
+          "FR_mean": 0.03657339224349534,
+          "FR_sd": 0.0024545900834560645,
+          "mean_m_mean": 24.758222047656457,
+          "mean_m_sd": 0.36049366809742756,
+          "stop_fraction_mean": 0.8705813040062843,
+          "bound_pass_all_seeds": true,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 94.55978368095077
+        },
+        "c_decorrelated_sprt": {
+          "FA_mean": 0.03323656235324254,
+          "FA_sd": 0.0006157283482839948,
+          "FR_mean": 0.03215513009327443,
+          "FR_sd": 0.0019482704794290086,
+          "mean_m_mean": 27.109282534694945,
+          "mean_m_sd": 0.05015403847546778,
+          "stop_fraction_mean": 0.8857488871432312,
+          "bound_pass_all_seeds": true,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 100.56698312946544
+        },
+        "d_uncalibrated_sprt": {
+          "FA_mean": 0.046051601702030764,
+          "FA_sd": 0.0013326351430769723,
+          "FR_mean": 0.05064637538864342,
+          "FR_sd": 0.007970176590951226,
+          "mean_m_mean": 21.174600680806495,
+          "mean_m_sd": 0.36517230691324004,
+          "stop_fraction_mean": 0.9304464519507724,
+          "bound_pass_all_seeds": false,
+          "modelled_energy_uJ_L_Perf_f0.2_mean": 85.40326541299946
+        }
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "speech_commands_v2_test_one_vs_rest",
+      "examples": [
+        {
+          "input": "Speech Commands v2 test split, 10 keywords one-vs-rest. Model seed 0, target alpha = beta = 0.001. Compare full window, calibrated SPRT, matched confidence threshold, oracle threshold, decorrelated SPRT and uncalibrated SPRT.",
+          "output": "Calibrated SPRT: FA=3.02% FR=2.85% mean_prefix_columns=32.11 stop_before_49=72.0% modelled_energy_LPerf_f0.2_uJ=113.4 bound_pass=False. Full window: FA=3.03% FR=2.80% mean_prefix_columns=49.00 stop_before_49=0.0% modelled_energy_LPerf_f0.2_uJ=156.5 bound_pass=False. Energy is MODELLED, not measured.",
+          "metadata_seed": 0,
+          "metadata_alpha_beta": 0.001,
+          "metadata_decorrelated_stride_frames": 5,
+          "metadata_systems": {
+            "a_full_window": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 0.0,
+                "FR_boundary_stops": 0.0,
+                "FA_fallback_at_49": 0.03031208641079281,
+                "FR_fallback_at_49": 0.027982326951399118,
+                "share_fallback_at_49": 1.0
+              },
+              "FA": 0.03031208641079281,
+              "FR": 0.027982326951399118,
+              "FA_ci95": [
+                0.028797669784334547,
+                0.03190352728112939
+              ],
+              "FR_ci95": [
+                0.023345609384157015,
+                0.033508356425710144
+              ],
+              "FA_counts": [
+                1420,
+                46846
+              ],
+              "FR_counts": [
+                114,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 49.0,
+              "stop_fraction_before_49": 0.0,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 156.5,
+                  "0.2": 156.5,
+                  "0.3": 156.5,
+                  "0.4": 156.5
+                },
+                "H-Perf": {
+                  "0.1": 219.0,
+                  "0.2": 219.0,
+                  "0.3": 219.0,
+                  "0.4": 219.0
+                }
+              }
+            },
+            "sprt_calibrated": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 0.0007304388476596739,
+                "FR_boundary_stops": 0.0028536485935589076,
+                "FA_fallback_at_49": 0.11030110935023772,
+                "FR_fallback_at_49": 0.06724244293645898,
+                "share_fallback_at_49": 0.2796739984289081
+              },
+              "FA": 0.03024804679161508,
+              "FR": 0.02847324496809033,
+              "FA_ci95": [
+                0.028735224368520374,
+                0.031837903960462016
+              ],
+              "FR_ci95": [
+                0.02379334849225984,
+                0.03404152842960954
+              ],
+              "FA_counts": [
+                1417,
+                46846
+              ],
+              "FR_counts": [
+                116,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 32.11457187745483,
+              "stop_fraction_before_49": 0.720326001571092,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 107.96300916203087,
+                  "0.2": 113.35600814402744,
+                  "0.3": 118.749007126024,
+                  "0.4": 124.14200610802058
+                },
+                "H-Perf": {
+                  "0.1": 151.07922687849688,
+                  "0.2": 158.62597944755277,
+                  "0.3": 166.17273201660865,
+                  "0.4": 173.7194845856646
+                }
+              },
+              "val_FA": 0.03104233686336206,
+              "val_FR": 0.025654874426140967
+            },
+            "b_confidence_threshold": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 5.0015004501350405e-05,
+                "FR_boundary_stops": 0.018506278916060808,
+                "FA_fallback_at_49": 0.19962088072324294,
+                "FR_fallback_at_49": 0.03787582975400234,
+                "share_fallback_at_49": 0.18497643362136684
+              },
+              "FA": 0.0292661059642232,
+              "FR": 0.030682376043200784,
+              "FA_ci95": [
+                0.027777962632685425,
+                0.030831445070246478
+              ],
+              "FR_ci95": [
+                0.025812952011665138,
+                0.03643602491421421
+              ],
+              "FA_counts": [
+                1371,
+                46846
+              ],
+              "FR_counts": [
+                125,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 27.36736056559309,
+              "stop_fraction_before_49": 0.8150235663786332,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 94.31719868701605,
+                  "0.2": 101.22639883290316,
+                  "0.3": 108.13559897879026,
+                  "0.4": 115.04479912467737
+                },
+                "H-Perf": {
+                  "0.1": 131.9838115811918,
+                  "0.2": 141.65227696105936,
+                  "0.3": 151.32074234092693,
+                  "0.4": 160.98920772079452
+                }
+              },
+              "tau": 0.999,
+              "val_FA": 0.03038485922934229,
+              "val_FR": 0.027275182284634082,
+              "matched_within_0p5_points_on_val": true
+            },
+            "b_oracle_threshold_test_tuned": {
+              "note": "no tau gives test error no worse than SPRT"
+            },
+            "c_decorrelated_sprt": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 0.0004496402877697842,
+                "FR_boundary_stops": 0.0018050541516245488,
+                "FA_fallback_at_49": 0.08949713558243157,
+                "FR_fallback_at_49": 0.059203444564047365,
+                "share_fallback_at_49": 0.3450117831893166
+              },
+              "FA": 0.03031208641079281,
+              "FR": 0.027982326951399118,
+              "FA_ci95": [
+                0.028797669784334547,
+                0.03190352728112939
+              ],
+              "FR_ci95": [
+                0.023345609384157015,
+                0.033508356425710144
+              ],
+              "FA_counts": [
+                1420,
+                46846
+              ],
+              "FR_counts": [
+                114,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 35.46904948939513,
+              "stop_fraction_before_49": 0.6549882168106834,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 117.60542082818988,
+                  "0.2": 121.92704073616879,
+                  "0.3": 126.24866064414768,
+                  "0.4": 130.5702805521266
+                },
+                "H-Perf": {
+                  "0.1": 164.5724419257098,
+                  "0.2": 170.61994837840874,
+                  "0.3": 176.66745483110762,
+                  "0.4": 182.71496128380656
+                }
+              },
+              "stride": 5
+            },
+            "d_uncalibrated_sprt": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 0.0013696590739913652,
+                "FR_boundary_stops": 0.006218905472636816,
+                "FA_fallback_at_49": 0.1302315059196139,
+                "FR_fallback_at_49": 0.044524669073405534,
+                "share_fallback_at_49": 0.2930675569520817
+              },
+              "FA": 0.03784741493403919,
+              "FR": 0.021845851742758958,
+              "FA_ci95": [
+                0.03615693201147391,
+                0.039613686379986066
+              ],
+              "FR_ci95": [
+                0.017787095930772684,
+                0.026805480979066737
+              ],
+              "FA_counts": [
+                1773,
+                46846
+              ],
+              "FR_counts": [
+                89,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 29.607501963864888,
+              "stop_fraction_before_49": 0.7069324430479184,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 100.75646227776264,
+                  "0.2": 106.95018869134458,
+                  "0.3": 113.14391510492649,
+                  "0.4": 119.33764151850842
+                },
+                "H-Perf": {
+                  "0.1": 140.9946660628116,
+                  "0.2": 149.66192538916587,
+                  "0.3": 158.32918471552014,
+                  "0.4": 166.9964440418744
+                }
+              }
+            }
+          },
+          "metadata_bootstrap_f02": {
+            "b_vs_a_full": {
+              "point": 0.3531859499495006,
+              "ci95": [
+                0.3481412860509482,
+                0.35853821119964097
+              ],
+              "p_two_sided": 0.0009995002498750624
+            },
+            "c_vs_a_full": {
+              "point": 0.22091347772416103,
+              "ci95": [
+                0.21652774259743165,
+                0.2253960594449877
+              ],
+              "p_two_sided": 0.0009995002498750624
+            },
+            "b_vs_sprt_literal": {
+              "point": 0.1070045559094911,
+              "ci95": [
+                0.10383742556340023,
+                0.11053218586259939
+              ],
+              "p_two_sided": 0.0009995002498750624
+            },
+            "sprt_vs_a_full": {
+              "point": 0.2756804591435944,
+              "ci95": [
+                0.2706688843644292,
+                0.2807067348541932
+              ],
+              "p_two_sided": 0.0009995002498750624
+            }
+          },
+          "predict_a_full_window": "FA=3.03% FR=2.80% mean_prefix_columns=49.00 stop_before_49=0.0% modelled_energy_LPerf_f0.2_uJ=156.5 bound_pass=False",
+          "predict_sprt_calibrated": "FA=3.02% FR=2.85% mean_prefix_columns=32.11 stop_before_49=72.0% modelled_energy_LPerf_f0.2_uJ=113.4 bound_pass=False",
+          "predict_b_confidence_threshold": "FA=2.93% FR=3.07% mean_prefix_columns=27.37 stop_before_49=81.5% modelled_energy_LPerf_f0.2_uJ=101.2 bound_pass=False",
+          "predict_b_oracle_threshold_test_tuned": "no tau gives test error no worse than SPRT",
+          "predict_c_decorrelated_sprt": "FA=3.03% FR=2.80% mean_prefix_columns=35.47 stop_before_49=65.5% modelled_energy_LPerf_f0.2_uJ=121.9 bound_pass=False",
+          "predict_d_uncalibrated_sprt": "FA=3.78% FR=2.18% mean_prefix_columns=29.61 stop_before_49=70.7% modelled_energy_LPerf_f0.2_uJ=107.0 bound_pass=False"
+        },
+        {
+          "input": "Speech Commands v2 test split, 10 keywords one-vs-rest. Model seed 0, target alpha = beta = 0.0025. Compare full window, calibrated SPRT, matched confidence threshold, oracle threshold, decorrelated SPRT and uncalibrated SPRT.",
+          "output": "Calibrated SPRT: FA=3.03% FR=2.90% mean_prefix_columns=29.94 stop_before_49=77.3% modelled_energy_LPerf_f0.2_uJ=107.8 bound_pass=False. Full window: FA=3.03% FR=2.80% mean_prefix_columns=49.00 stop_before_49=0.0% modelled_energy_LPerf_f0.2_uJ=156.5 bound_pass=False. Energy is MODELLED, not measured.",
+          "metadata_seed": 0,
+          "metadata_alpha_beta": 0.0025,
+          "metadata_decorrelated_stride_frames": 5,
+          "metadata_systems": {
+            "a_full_window": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 0.0,
+                "FR_boundary_stops": 0.0,
+                "FA_fallback_at_49": 0.03031208641079281,
+                "FR_fallback_at_49": 0.027982326951399118,
+                "share_fallback_at_49": 1.0
+              },
+              "FA": 0.03031208641079281,
+              "FR": 0.027982326951399118,
+              "FA_ci95": [
+                0.028797669784334547,
+                0.03190352728112939
+              ],
+              "FR_ci95": [
+                0.023345609384157015,
+                0.033508356425710144
+              ],
+              "FA_counts": [
+                1420,
+                46846
+              ],
+              "FR_counts": [
+                114,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 49.0,
+              "stop_fraction_before_49": 0.0,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 156.5,
+                  "0.2": 156.5,
+                  "0.3": 156.5,
+                  "0.4": 156.5
+                },
+                "H-Perf": {
+                  "0.1": 219.0,
+                  "0.2": 219.0,
+                  "0.3": 219.0,
+                  "0.4": 219.0
+                }
+              }
+            },
+            "sprt_calibrated": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 0.0014766605594902786,
+                "FR_boundary_stops": 0.005001786352268668,
+                "FA_fallback_at_49": 0.13291816678018878,
+                "FR_fallback_at_49": 0.0815686274509804,
+                "share_fallback_at_49": 0.22686567164179106
+              },
+              "FA": 0.03031208641079281,
+              "FR": 0.028964162984781543,
+              "FA_ci95": [
+                0.028797669784334547,
+                0.03190352728112939
+              ],
+              "FR_ci95": [
+                0.024241484671590676,
+                0.03457430336228092
+              ],
+              "FA_counts": [
+                1420,
+                46846
+              ],
+              "FR_counts": [
+                118,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 29.943126472898665,
+              "stop_fraction_before_49": 0.7731343283582089,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 101.72121150424034,
+                  "0.2": 107.80774355932476,
+                  "0.3": 113.89427561440915,
+                  "0.4": 119.98080766949356
+                },
+                "H-Perf": {
+                  "0.1": 142.34469852670054,
+                  "0.2": 150.86195424595607,
+                  "0.3": 159.37920996521154,
+                  "0.4": 167.89646568446702
+                }
+              },
+              "val_FA": 0.03125366896001127,
+              "val_FR": 0.02592492573588982
+            },
+            "b_confidence_threshold": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 5.0015004501350405e-05,
+                "FR_boundary_stops": 0.018506278916060808,
+                "FA_fallback_at_49": 0.19962088072324294,
+                "FR_fallback_at_49": 0.03787582975400234,
+                "share_fallback_at_49": 0.18497643362136684
+              },
+              "FA": 0.0292661059642232,
+              "FR": 0.030682376043200784,
+              "FA_ci95": [
+                0.027777962632685425,
+                0.030831445070246478
+              ],
+              "FR_ci95": [
+                0.025812952011665138,
+                0.03643602491421421
+              ],
+              "FA_counts": [
+                1371,
+                46846
+              ],
+              "FR_counts": [
+                125,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 27.36736056559309,
+              "stop_fraction_before_49": 0.8150235663786332,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 94.31719868701605,
+                  "0.2": 101.22639883290316,
+                  "0.3": 108.13559897879026,
+                  "0.4": 115.04479912467737
+                },
+                "H-Perf": {
+                  "0.1": 131.9838115811918,
+                  "0.2": 141.65227696105936,
+                  "0.3": 151.32074234092693,
+                  "0.4": 160.98920772079452
+                }
+              },
+              "tau": 0.999,
+              "val_FA": 0.03038485922934229,
+              "val_FR": 0.027275182284634082,
+              "matched_within_0p5_points_on_val": true
+            },
+            "b_oracle_threshold_test_tuned": {
+              "note": "no tau gives test error no worse than SPRT"
+            },
+            "c_decorrelated_sprt": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 0.0009139420383855656,
+                "FR_boundary_stops": 0.002733307301835221,
+                "FA_fallback_at_49": 0.10768159665815734,
+                "FR_fallback_at_49": 0.07204230006609386,
+                "share_fallback_at_49": 0.2835820895522388
+              },
+              "FA": 0.030376126029970543,
+              "FR": 0.02847324496809033,
+              "FA_ci95": [
+                0.028860117040598612,
+                0.03196914876134688
+              ],
+              "FR_ci95": [
+                0.02379334849225984,
+                0.03404152842960954
+              ],
+              "FA_counts": [
+                1423,
+                46846
+              ],
+              "FR_counts": [
+                116,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 33.554791830322074,
+              "stop_fraction_before_49": 0.7164179104477612,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 112.10290672042579,
+                  "0.2": 117.03591708482296,
+                  "0.3": 121.96892744922008,
+                  "0.4": 126.90193781361718
+                },
+                "H-Perf": {
+                  "0.1": 156.87243815829552,
+                  "0.2": 163.7755005851516,
+                  "0.3": 170.67856301200763,
+                  "0.4": 177.58162543886368
+                }
+              },
+              "stride": 5
+            },
+            "d_uncalibrated_sprt": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 0.0025738957157090668,
+                "FR_boundary_stops": 0.00721240533717995,
+                "FA_fallback_at_49": 0.1569908530894157,
+                "FR_fallback_at_49": 0.053036126056879324,
+                "share_fallback_at_49": 0.23595836606441478
+              },
+              "FA": 0.03789010801349101,
+              "FR": 0.021845851742758958,
+              "FA_ci95": [
+                0.036198685927857695,
+                0.039657311621256665
+              ],
+              "FR_ci95": [
+                0.017787095930772684,
+                0.026805480979066737
+              ],
+              "FA_counts": [
+                1775,
+                46846
+              ],
+              "FR_counts": [
+                89,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 27.70310290652003,
+              "stop_fraction_before_49": 0.7640416339355852,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 95.28228662006829,
+                  "0.2": 102.08425477339405,
+                  "0.3": 108.88622292671978,
+                  "0.4": 115.68819108004553
+                },
+                "H-Perf": {
+                  "0.1": 133.33431801785915,
+                  "0.2": 142.8527271269859,
+                  "0.3": 152.37113623611268,
+                  "0.4": 161.88954534523944
+                }
+              }
+            }
+          },
+          "metadata_bootstrap_f02": {
+            "b_vs_a_full": {
+              "point": 0.3531859499495006,
+              "ci95": [
+                0.3481679304871987,
+                0.3584351924587589
+              ],
+              "p_two_sided": 0.0009995002498750624
+            },
+            "c_vs_a_full": {
+              "point": 0.2521666639947415,
+              "ci95": [
+                0.24744853070843412,
+                0.25687376757458674
+              ],
+              "p_two_sided": 0.0009995002498750624
+            },
+            "b_vs_sprt_literal": {
+              "point": 0.06104705013884282,
+              "ci95": [
+                0.058519512799791173,
+                0.06356782099773295
+              ],
+              "p_two_sided": 0.0009995002498750624
+            },
+            "sprt_vs_a_full": {
+              "point": 0.31113262901389926,
+              "ci95": [
+                0.30585929108485493,
+                0.31600767911249333
+              ],
+              "p_two_sided": 0.0009995002498750624
+            }
+          },
+          "predict_a_full_window": "FA=3.03% FR=2.80% mean_prefix_columns=49.00 stop_before_49=0.0% modelled_energy_LPerf_f0.2_uJ=156.5 bound_pass=False",
+          "predict_sprt_calibrated": "FA=3.03% FR=2.90% mean_prefix_columns=29.94 stop_before_49=77.3% modelled_energy_LPerf_f0.2_uJ=107.8 bound_pass=False",
+          "predict_b_confidence_threshold": "FA=2.93% FR=3.07% mean_prefix_columns=27.37 stop_before_49=81.5% modelled_energy_LPerf_f0.2_uJ=101.2 bound_pass=False",
+          "predict_b_oracle_threshold_test_tuned": "no tau gives test error no worse than SPRT",
+          "predict_c_decorrelated_sprt": "FA=3.04% FR=2.85% mean_prefix_columns=33.55 stop_before_49=71.6% modelled_energy_LPerf_f0.2_uJ=117.0 bound_pass=False",
+          "predict_d_uncalibrated_sprt": "FA=3.79% FR=2.18% mean_prefix_columns=27.70 stop_before_49=76.4% modelled_energy_LPerf_f0.2_uJ=102.1 bound_pass=False"
+        },
+        {
+          "input": "Speech Commands v2 test split, 10 keywords one-vs-rest. Model seed 0, target alpha = beta = 0.005. Compare full window, calibrated SPRT, matched confidence threshold, oracle threshold, decorrelated SPRT and uncalibrated SPRT.",
+          "output": "Calibrated SPRT: FA=3.05% FR=2.90% mean_prefix_columns=28.28 stop_before_49=81.2% modelled_energy_LPerf_f0.2_uJ=103.5 bound_pass=False. Full window: FA=3.03% FR=2.80% mean_prefix_columns=49.00 stop_before_49=0.0% modelled_energy_LPerf_f0.2_uJ=156.5 bound_pass=False. Energy is MODELLED, not measured.",
+          "metadata_seed": 0,
+          "metadata_alpha_beta": 0.005,
+          "metadata_decorrelated_stride_frames": 5,
+          "metadata_systems": {
+            "a_full_window": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 0.0,
+                "FR_boundary_stops": 0.0,
+                "FA_fallback_at_49": 0.03031208641079281,
+                "FR_fallback_at_49": 0.027982326951399118,
+                "share_fallback_at_49": 1.0
+              },
+              "FA": 0.03031208641079281,
+              "FR": 0.027982326951399118,
+              "FA_ci95": [
+                0.028797669784334547,
+                0.03190352728112939
+              ],
+              "FR_ci95": [
+                0.023345609384157015,
+                0.033508356425710144
+              ],
+              "FA_counts": [
+                1420,
+                46846
+              ],
+              "FR_counts": [
+                114,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 49.0,
+              "stop_fraction_before_49": 0.0,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 156.5,
+                  "0.2": 156.5,
+                  "0.3": 156.5,
+                  "0.4": 156.5
+                },
+                "H-Perf": {
+                  "0.1": 219.0,
+                  "0.2": 219.0,
+                  "0.3": 219.0,
+                  "0.4": 219.0
+                }
+              }
+            },
+            "sprt_calibrated": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 0.0028748399236860674,
+                "FR_boundary_stops": 0.006194978806651451,
+                "FA_fallback_at_49": 0.15367587090760806,
+                "FR_fallback_at_49": 0.09831181727904667,
+                "share_fallback_at_49": 0.18833464257659074
+              },
+              "FA": 0.030504205268326003,
+              "FR": 0.028964162984781543,
+              "FA_ci95": [
+                0.028985017051980325,
+                0.03210038622292827
+              ],
+              "FR_ci95": [
+                0.024241484671590676,
+                0.03457430336228092
+              ],
+              "FA_counts": [
+                1429,
+                46846
+              ],
+              "FR_counts": [
+                118,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 28.276747839748626,
+              "stop_fraction_before_49": 0.8116653574234093,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 96.93122312711417,
+                  "0.2": 103.5499761129904,
+                  "0.3": 110.16872909886658,
+                  "0.4": 116.78748208474278
+                },
+                "H-Perf": {
+                  "0.1": 135.64177549417255,
+                  "0.2": 144.9038004392645,
+                  "0.3": 154.16582538435642,
+                  "0.4": 163.42785032944838
+                }
+              },
+              "val_FA": 0.03148848240073262,
+              "val_FR": 0.025384823116392115
+            },
+            "b_confidence_threshold": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 5.0015004501350405e-05,
+                "FR_boundary_stops": 0.018506278916060808,
+                "FA_fallback_at_49": 0.19962088072324294,
+                "FR_fallback_at_49": 0.03787582975400234,
+                "share_fallback_at_49": 0.18497643362136684
+              },
+              "FA": 0.0292661059642232,
+              "FR": 0.030682376043200784,
+              "FA_ci95": [
+                0.027777962632685425,
+                0.030831445070246478
+              ],
+              "FR_ci95": [
+                0.025812952011665138,
+                0.03643602491421421
+              ],
+              "FA_counts": [
+                1371,
+                46846
+              ],
+              "FR_counts": [
+                125,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 27.36736056559309,
+              "stop_fraction_before_49": 0.8150235663786332,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 94.31719868701605,
+                  "0.2": 101.22639883290316,
+                  "0.3": 108.13559897879026,
+                  "0.4": 115.04479912467737
+                },
+                "H-Perf": {
+                  "0.1": 131.9838115811918,
+                  "0.2": 141.65227696105936,
+                  "0.3": 151.32074234092693,
+                  "0.4": 160.98920772079452
+                }
+              },
+              "tau": 0.999,
+              "val_FA": 0.03038485922934229,
+              "val_FR": 0.027275182284634082,
+              "matched_within_0p5_points_on_val": true
+            },
+            "b_oracle_threshold_test_tuned": {
+              "note": "no tau gives test error no worse than SPRT"
+            },
+            "c_decorrelated_sprt": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 0.0017288494785566895,
+                "FR_boundary_stops": 0.003885552808194984,
+                "FA_fallback_at_49": 0.12381646030589949,
+                "FR_fallback_at_49": 0.08527755430410297,
+                "share_fallback_at_49": 0.24012175962293794
+              },
+              "FA": 0.03035477949024463,
+              "FR": 0.028718703976435934,
+              "FA_ci95": [
+                0.02883930108436438,
+                0.03194727513875392
+              ],
+              "FR_ci95": [
+                0.02401736756252436,
+                0.034307964915346115
+              ],
+              "FA_counts": [
+                1422,
+                46846
+              ],
+              "FR_counts": [
+                117,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 32.07278083267871,
+              "stop_fraction_before_49": 0.7598782403770621,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 107.84288123026116,
+                  "0.2": 113.24922776023213,
+                  "0.3": 118.6555742902031,
+                  "0.4": 124.0619208201741
+                },
+                "H-Perf": {
+                  "0.1": 150.9111245330811,
+                  "0.2": 158.47655514051652,
+                  "0.3": 166.04198574795194,
+                  "0.4": 173.60741635538741
+                }
+              },
+              "stride": 5
+            },
+            "d_uncalibrated_sprt": {
+              "error_split_boundary_vs_fallback": {
+                "FA_boundary_stops": 0.004192595717751292,
+                "FR_boundary_stops": 0.007590759075907591,
+                "FA_fallback_at_49": 0.18157363819771352,
+                "FR_fallback_at_49": 0.06417624521072797,
+                "share_fallback_at_49": 0.19571877454831108
+              },
+              "FA": 0.03797549417239465,
+              "FR": 0.022091310751104567,
+              "FA_ci95": [
+                0.03628219553670131,
+                0.03974456032772178
+              ],
+              "FR_ci95": [
+                0.01800789960777144,
+                0.027075132858069093
+              ],
+              "FA_counts": [
+                1779,
+                46846
+              ],
+              "FR_counts": [
+                90,
+                4074
+              ],
+              "bound_pass": false,
+              "mean_m_columns": 26.302749410840534,
+              "stop_fraction_before_49": 0.8042812254516889,
+              "modelled_energy_uJ": {
+                "L-Perf": {
+                  "0.1": 91.25698478605896,
+                  "0.2": 98.50620869871908,
+                  "0.3": 105.75543261137919,
+                  "0.4": 113.00465652403932
+                },
+                "H-Perf": {
+                  "0.1": 127.70146752809529,
+                  "0.2": 137.84574891386248,
+                  "0.3": 147.99003029962967,
+                  "0.4": 158.13431168539688
+                }
+              }
+            }
+          },
+          "metadata_bootstrap_f02": {
+            "b_vs_a_full": {
+              "point": 0.3531859499495006,
+              "ci95": [
+                0.34795435817689196,
+                0.35832705965339784
+              ],
+              "p_two_sided": 0.0009995002498750624
+            },
+            "c_vs_a_full": {
+              "point": 0.2763627619154496,
+              "ci95": [
+                0.2716236112669734,
+                0.28117815861615664
+              ],
+              "p_two_sided": 0.0009995002498750624
+            },
+            "b_vs_sprt_literal": {
+              "point": 0.022439187021654372,
+              "ci95": [
+                0.02081261488559528,
+                0.024010470735095508
+              ],
+              "p_two_sided": 0.0009995002498750624
+            },
+            "sprt_vs_a_full": {
+              "point": 0.33833881077961414,
+              "ci95": [
+                0.3333365823941518,
+                0.34380382192154163
+              ],
+              "p_two_sided": 0.0009995002498750624
+            }
+          },
+          "predict_a_full_window": "FA=3.03% FR=2.80% mean_prefix_columns=49.00 stop_before_49=0.0% modelled_energy_LPerf_f0.2_uJ=156.5 bound_pass=False",
+          "predict_sprt_calibrated": "FA=3.05% FR=2.90% mean_prefix_columns=28.28 stop_before_49=81.2% modelled_energy_LPerf_f0.2_uJ=103.5 bound_pass=False",
+          "predict_b_confidence_threshold": "FA=2.93% FR=3.07% mean_prefix_columns=27.37 stop_before_49=81.5% modelled_energy_LPerf_f0.2_uJ=101.2 bound_pass=False",
+          "predict_b_oracle_threshold_test_tuned": "no tau gives test error no worse than SPRT",
+          "predict_c_decorrelated_sprt": "FA=3.04% FR=2.87% mean_prefix_columns=32.07 stop_before_49=76.0% modelled_energy_LPerf_f0.2_uJ=113.2 bound_pass=False",
+          "predict_d_uncalibrated_sprt": "FA=3.80% FR=2.21% mean_prefix_columns=26.30 stop_before_49=80.4% modelled_energy_LPerf_f0.2_uJ=98.5 bound_pass=False"
+        }
+      ]
+    }
+  ]
+}

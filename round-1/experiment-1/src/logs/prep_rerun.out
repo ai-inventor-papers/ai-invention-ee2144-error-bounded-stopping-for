@@ -1,0 +1,11 @@
+01:01:12|INFO   |[train] reading ['train_part_000.parquet', 'train_part_001.parquet', 'train_part_002.parquet']
+01:01:12|INFO   |[train] total=84843 keyword=30769 unknown_pool=54074 unknown_kept=3846 silence_generated=3846
+01:02:35|INFO   |[train] saved features (38461, 49, 10), label counts [3228, 3130, 2948, 3134, 3037, 3019, 3086, 2970, 3111, 3106, 3846, 3846]
+01:02:35|INFO   |[validation] reading ['validation.parquet']
+01:02:35|INFO   |[validation] total=9981 keyword=3703 unknown_pool=6278 unknown_kept=463 silence_generated=463
+01:02:45|INFO   |[validation] saved features (4629, 49, 10), label counts [397, 406, 350, 377, 352, 363, 363, 373, 350, 372, 463, 463]
+01:02:45|INFO   |[test] reading ['test.parquet']
+01:02:45|INFO   |[test] total=11005 keyword=4074 unknown_pool=6931 unknown_kept=509 silence_generated=509
+01:02:56|INFO   |[test] saved features (5092, 49, 10), label counts [419, 405, 425, 406, 412, 396, 396, 402, 411, 402, 509, 509]
+01:02:56|INFO   |path overlap between splits: {'train_val': 0, 'train_test': 0, 'val_test': 0}
+01:02:56|INFO   |prep done
