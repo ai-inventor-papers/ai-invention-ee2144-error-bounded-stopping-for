@@ -1,0 +1,107 @@
+{
+  "list_lines": {
+    "validation_list.txt": 9981,
+    "testing_list.txt": 11005
+  },
+  "splits": {
+    "train": {
+      "n": 36923,
+      "label_counts": {
+        "_silence_": 3077,
+        "_unknown_": 3077,
+        "down": 3134,
+        "go": 3106,
+        "left": 3037,
+        "no": 3130,
+        "off": 2970,
+        "on": 3086,
+        "right": 3019,
+        "stop": 3111,
+        "up": 2948,
+        "yes": 3228
+      }
+    },
+    "validation": {
+      "n": 4445,
+      "label_counts": {
+        "_silence_": 371,
+        "_unknown_": 371,
+        "down": 377,
+        "go": 372,
+        "left": 352,
+        "no": 406,
+        "off": 373,
+        "on": 363,
+        "right": 363,
+        "stop": 350,
+        "up": 350,
+        "yes": 397
+      }
+    },
+    "testing": {
+      "n": 4890,
+      "label_counts": {
+        "_silence_": 408,
+        "_unknown_": 408,
+        "down": 406,
+        "go": 402,
+        "left": 412,
+        "no": 405,
+        "off": 402,
+        "on": 396,
+        "right": 396,
+        "stop": 411,
+        "up": 425,
+        "yes": 419
+      }
+    },
+    "test_bench": {
+      "n": 4890,
+      "label_counts": {
+        "_silence_": 408,
+        "_unknown_": 408,
+        "down": 406,
+        "go": 402,
+        "left": 412,
+        "no": 405,
+        "off": 402,
+        "on": 396,
+        "right": 396,
+        "stop": 411,
+        "up": 425,
+        "yes": 419
+      }
+    }
+  },
+  "seeds": {
+    "unknown": 42,
+    "silence": 43
+  },
+  "unknown_silence_percent": 10.0,
+  "label_index": {
+    "yes": 0,
+    "no": 1,
+    "up": 2,
+    "down": 3,
+    "left": 4,
+    "right": 5,
+    "on": 6,
+    "off": 7,
+    "stop": 8,
+    "go": 9,
+    "_silence_": 10,
+    "_unknown_": 11
+  },
+  "feature_settings": {
+    "sr": 16000,
+    "window_samples": 640,
+    "hop_samples": 320,
+    "n_fft": 640,
+    "frames": 49,
+    "bins": 10,
+    "log_floor": 1e-06,
+    "log_mel_n_mels": 10,
+    "mfcc_n_mels": 40,
+    "mfcc_n_coeffs": 10
+  }
+}

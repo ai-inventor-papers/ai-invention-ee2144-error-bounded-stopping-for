@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "description": "Frozen keyword-spotting feature cache (audio excluded). One example per clip; features are in features_<split>.npy (log-mel) and mfcc_features_<split>.npy (MFCC), row i = metadata_feature_index of the...[truncated]",
+    "source": "Speech Commands v0.02 (Warden 2018) official archive and speech_commands_test_set_v0.02",
+    "splits": {
+      "train": 36923,
+      "validation": 4445,
+      "testing": 4890,
+      "test_bench": 4890
+    },
+    "feature_settings": {
+      "sr": 16000,
+      "window_samples": 640,
+      "hop_samples": 320,
+      "n_fft": 640,
+      "frames": 49,
+      "bins": 10,
+      "log_floor": 1e-06,
+      "log_mel_n_mels": 10,
+      "mfcc_n_mels": 40,
+      "mfcc_n_coeffs": 10
+    },
+    "seeds": {
+      "unknown": 42,
+      "silence": 43
+    },
+    "label_index": {
+      "yes": 0,
+      "no": 1,
+      "up": 2,
+      "down": 3,
+      "left": 4,
+      "right": 5,
+      "on": 6,
+      "off": 7,
+      "stop": 8,
+      "go": 9,
+      "_silence_": 10,
+      "_unknown_": 11
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "speech_commands_v0.02_kws12",
+      "examples": [
+        {
+          "input": "down/00176480_nohash_0.wav",
+          "output": "down",
+          "metadata_split": "train",
+          "metadata_label_index": 3,
+          "metadata_speaker_hash": "00176480",
+          "metadata_feature_index": 0,
+          "metadata_feature_sha256": "2afdeb8a5854eed0a68f6afd0c70f5a7811c3b5c7a2b7e6f2a014697818396e6",
+          "metadata_is_generated": false
+        },
+        {
+          "input": "down/004ae714_nohash_0.wav",
+          "output": "down",
+          "metadata_split": "train",
+          "metadata_label_index": 3,
+          "metadata_speaker_hash": "004ae714",
+          "metadata_feature_index": 1,
+          "metadata_feature_sha256": "555a74db21ff537344cf72d4bedf0a86b43610506f56de9a8cf771d99ff16028",
+          "metadata_is_generated": false
+        },
+        {
+          "input": "down/00b01445_nohash_0.wav",
+          "output": "down",
+          "metadata_split": "train",
+          "metadata_label_index": 3,
+          "metadata_speaker_hash": "00b01445",
+          "metadata_feature_index": 2,
+          "metadata_feature_sha256": "0b3f998f4c9c1c100b7304430331380a09c292c460f4f7c69ed7c175b34fc8d8",
+          "metadata_is_generated": false
+        }
+      ]
+    }
+  ]
+}

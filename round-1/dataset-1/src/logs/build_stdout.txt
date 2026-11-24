@@ -1,0 +1,31 @@
+01:21:11|INFO   |Stage: extract archives
+01:21:11|INFO   |Already extracted: ./temp/datasets/extracted/v0.02
+01:21:11|INFO   |Already extracted: ./temp/datasets/extracted/test_set
+01:21:11|INFO   |Archive root: ./temp/datasets/extracted/v0.02
+01:21:11|INFO   |validation_list.txt: 9981 lines
+01:21:11|INFO   |testing_list.txt: 11005 lines
+01:21:11|INFO   |validation & testing overlap: 0 (checked)
+01:21:17|INFO   |Word clips found: 105829
+01:21:18|INFO   |Background ranges: {'train': 6, 'validation': 6, 'testing': 6}
+01:21:18|INFO   |train: known=30769 unknown=3077 silence=3077 total=36923
+01:21:18|INFO   |validation: known=3703 unknown=371 silence=371 total=4445
+01:21:18|INFO   |testing: known=4074 unknown=408 silence=408 total=4890
+01:21:19|INFO   |test_bench: total=4890
+01:21:19|INFO   |Featurizing train: 36923 clips with 2 workers
+01:21:22|INFO   |  featurized 5000/36923
+01:21:25|INFO   |  featurized 10000/36923
+01:21:27|INFO   |  featurized 15000/36923
+01:21:29|INFO   |  featurized 20000/36923
+01:21:31|INFO   |  featurized 25000/36923
+01:21:34|INFO   |  featurized 30000/36923
+01:21:36|INFO   |  featurized 35000/36923
+01:21:37|INFO   |Saved features_train.npy (36923, 49, 10) and mfcc_features_train.npy
+01:21:37|INFO   |Featurizing validation: 4445 clips with 2 workers
+01:21:40|INFO   |Saved features_validation.npy (4445, 49, 10) and mfcc_features_validation.npy
+01:21:40|INFO   |Featurizing testing: 4890 clips with 2 workers
+01:21:44|INFO   |Saved features_testing.npy (4890, 49, 10) and mfcc_features_testing.npy
+01:21:44|INFO   |Featurizing test_bench: 4890 clips with 2 workers
+01:21:47|INFO   |Saved features_test_bench.npy (4890, 49, 10) and mfcc_features_test_bench.npy
+01:21:47|INFO   |Duplicate clip_ids: 0
+01:21:47|INFO   |Wrote index.json with 51148 rows
+01:21:47|INFO   |Done. Stage complete.

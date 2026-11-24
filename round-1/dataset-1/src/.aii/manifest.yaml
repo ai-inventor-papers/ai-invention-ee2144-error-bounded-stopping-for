@@ -1,0 +1,12 @@
+entries:
+  - path: features/
+    keep: frozen 49x10 feature arrays and index are the product of this artifact; the next round reads them in place
+  - path: temp/datasets/archives/
+    delete: redownloadable
+    source: "curl -L -o temp/datasets/archives/speech_commands_v0.02.tar.gz http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz && curl -L -o temp/datasets/archives/speech_commands_test_set_v0.02.tar.gz http://download.tensorflow.org/data/speech_commands_test_set_v0.02.tar.gz"
+  - path: .venv/
+    delete: regenerable
+    source: "uv sync --python 3.12"
+  - path: scripts/__pycache__/
+    delete: regenerable
+    source: "uv run data.py"
